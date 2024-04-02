@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Convert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <div class="box">
+        <h5 class="head">Currency Converter</h5>
+        <div class="flex-column">
+          <label>Enter Amount</label>
+          <input
+            type="text"
+            id="txtAmt"
+            onkeyup="chkNumber()"
+            onfocusout="chkNumber()"
+          />
+        </div>
+        <div class="FrmToWrp">
+          <div class="frm flex-column">
+            <label for="From">From</label>
+            <select
+              name="FromCurr"
+              id="frmCurr"
+              onchange="updateTolist(this.value)"
+            >
+              <option value="AUD">AUD</option>
+              <option value="BGN">BGN</option>
+              <option value="BRL">BRL</option>
+              <option value="CAD">CAD</option>
+              <option value="CHF">CHF</option>
+              <option value="CNY">CNY</option>
+              <option value="CZK">CZK</option>
+              <option value="DKK">DKK</option>
+              <option value="GBP">GBP</option>
+              <option value="HKD">HKD</option>
+              <option value="HUF">HUF</option>
+              <option value="IDR">IDR</option>
+              <option value="ILS">ILS</option>
+              <option value="INR">INR</option>
+              <option value="ISK">ISK</option>
+              <option value="JPY">JPY</option>
+              <option value="KRW">KRW</option>
+              <option value="MXN">MXN</option>
+              <option value="MYR">MYR</option>
+              <option value="NOK">NOK</option>
+              <option value="NZD">NZD</option>
+              <option value="PHP">PHP</option>
+              <option value="PLN">PLN</option>
+              <option value="RON">RON</option>
+              <option value="SEK">SEK</option>
+              <option value="SGD">SGD</option>
+              <option value="THB">THB</option>
+              <option value="TRY">TRY</option>
+              <option value="USD" selected="selected">USD</option>
+              <option value="ZAR">ZAR</option>
+            </select>
+          </div>
+          <div class="to flex-column">
+            <label for="To">To</label>
+            <select name="ToCurr" id="toCurr">
+              <option value="AUD">AUD</option>
+              <option value="BGN">BGN</option>
+              <option value="BRL">BRL</option>
+              <option value="CAD">CAD</option>
+              <option value="CHF">CHF</option>
+              <option value="CNY">CNY</option>
+              <option value="CZK">CZK</option>
+              <option value="DKK">DKK</option>
+              <option value="GBP">GBP</option>
+              <option value="HKD">HKD</option>
+              <option value="HUF">HUF</option>
+              <option value="IDR">IDR</option>
+              <option value="ILS">ILS</option>
+              <option value="INR" selected="selected">INR</option>
+              <option value="ISK">ISK</option>
+              <option value="JPY">JPY</option>
+              <option value="KRW">KRW</option>
+              <option value="MXN">MXN</option>
+              <option value="MYR">MYR</option>
+              <option value="NOK">NOK</option>
+              <option value="NZD">NZD</option>
+              <option value="PHP">PHP</option>
+              <option value="PLN">PLN</option>
+              <option value="RON">RON</option>
+              <option value="SEK">SEK</option>
+              <option value="SGD">SGD</option>
+              <option value="THB">THB</option>
+              <option value="TRY">TRY</option>
+              <option value="USD" disabled>USD</option>
+              <option value="ZAR">ZAR</option>
+            </select>
+          </div>
+        </div>
+        <div class="result">
+          <label id="lblRes">1 USD = 1 INR</label>
+        </div>
+        <button class="btn" onclick="getData()">Get Exchange Rate</button>
+      </div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>

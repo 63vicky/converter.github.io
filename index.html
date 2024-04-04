@@ -6,10 +6,7 @@
     <title>Currency Convert</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
@@ -18,21 +15,12 @@
         <h5 class="head">Currency Converter</h5>
         <div class="flex-column">
           <label>Enter Amount</label>
-          <input
-            type="text"
-            id="txtAmt"
-            onkeyup="chkNumber()"
-            onfocusout="chkNumber()"
-          />
+          <input type="text" id="txtAmt" onkeyup="chkNumber()" onfocusout="chkNumber()" />
         </div>
         <div class="FrmToWrp">
           <div class="frm flex-column">
             <label for="From">From</label>
-            <select
-              name="FromCurr"
-              id="frmCurr"
-              onchange="updateTolist(this.value)"
-            >
+            <select name="FromCurr" id="frmCurr" onchange="updateTolist(this.value)">
               <option value="AUD">AUD</option>
               <option value="BGN">BGN</option>
               <option value="BRL">BRL</option>
@@ -102,7 +90,7 @@
           </div>
         </div>
         <div class="result">
-          <label id="lblRes">1 USD = 1 INR</label>
+          <label id="lblRes"></label>
         </div>
         <button class="btn" onclick="getData()">Get Exchange Rate</button>
       </div>

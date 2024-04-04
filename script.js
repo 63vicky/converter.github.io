@@ -4,7 +4,6 @@ const requestOptions = {
 };
 
 function getData() {
-  debugger;
   var amount = document.getElementById("txtAmt");
   var lblResult = document.getElementById("lblRes");
   var From = document.getElementById("frmCurr");
@@ -20,25 +19,38 @@ function getData() {
     .catch((error) => console.error(error));
 }
 
+// function updateTolist(selectedFrm) {
+//   // Get the select element
+//   const select = document.querySelector("#toCurr");
+
+//   // Get all the options in the select element
+//   const options = select.options;
+
+//   // Loop through the options and print their values
+//   for (const option of options) {
+//     if (option.value == selectedFrm) {
+//       option.disabled = true;
+//     }
+//   }
+// }
 function updateTolist(selectedFrm) {
   // Get the select element
   const select = document.querySelector("#toCurr");
 
-  // Get all the options in the select element
-  const options = select.options;
+  // Create a new array of options without the selected currency
+  const options = Array.from(select.options).filter((option) => option.value !== selectedFrm);
 
-  // Loop through the options and print their values
-  for (const option of options) {
-    if (option.value == selectedFrm) {
-      option.disabled = true;
-    }
-  }
+  // Clear the current options in the dropdown list
+  select.innerHTML = "";
+
+  // Add the new options to the dropdown list
+  options.forEach((option) => {
+    const newOption = document.createElement("option");
+    newOption.value = option.value;
+    newOption.textContent = option.textContent;
+    select.appendChild(newOption);
+  });
 }
-
-window.onload = function () {
-  chkNumber();
-  getData();
-};
 
 document.body.addEventListener("keyup", KeyCheck); //or however you are calling your method
 function KeyCheck(event) {
@@ -64,3 +76,33 @@ function chkNumber() {
     amtChk.value = 1;
   }
 }
+
+function format(item) {
+  if (!item.id) {
+    return item.text;
+  }
+  var countryUrl = "https://hatscripts.github.io/circle-flags/flags/";
+
+  var url = countryUrl;
+  debugger;
+  var img = $("<img>", {
+    class: "img-flag",
+    width: 26,
+    src: url + item.element.getAttribute("data-flag").toLowerCase() + ".svg",
+  });
+  var span = $("<span>", {
+    text: " " + item.text,
+  });
+  span.prepend(img);
+  return span;
+}
+
+$(document).ready(function () {
+  $("#frmCurr").select2({
+    templateResult: function (item) {
+      return format(item);
+    },
+  });
+  chkNumber();
+  getData();
+});

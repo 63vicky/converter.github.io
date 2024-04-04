@@ -1,0 +1,26 @@
+[
+  {
+    "code": "AUD",
+    "name": "Australian Dollar",
+    "symbol": "AU$",
+    "emoji": "🇦🇺"
+  },
+  {
+    "code": "BGN",
+    "name": "Bulgarian Lev",
+    "symbol": "BGN",
+    "emoji": "🇧🇬"
+  },
+  {
+    "code": "BRL",
+    "name": "Brazilian Real",
+    "symbol": "R$",
+    "emoji": "🇧🇷"
+  },
+  {
+    "code": "ZAR",
+    "name": "South African Rand",
+    "symbol": "ZAR",
+    "emoji": "🇿🇦"
+  }
+]

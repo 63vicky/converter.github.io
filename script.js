@@ -35,27 +35,33 @@ function getData() {
 // }
 function updateTolist(selectedFrm) {
   // Get the select element
-  const select = document.querySelector("#toCurr");
+  const select = selectedFrm;
 
-  // Create a new array of options without the selected currency
-  const options = Array.from(select.options).filter((option) => option.value !== selectedFrm);
-
-  // Clear the current options in the dropdown list
-  select.innerHTML = "";
+  // Filter out the selected currency
+  let options = Array.from(select.options);
 
   // Add the new options to the dropdown list
   options.forEach((option) => {
-    const newOption = document.createElement("option");
-    newOption.value = option.value;
-    newOption.textContent = option.textContent;
-    select.appendChild(newOption);
+    if (option.value == selectedFrm.value) {
+      option.setAttribute("disabled", "disabled");
+    } else {
+      option.removeAttribute("disabled", "disabled");
+    }
+  });
+
+  $(".Sel2").select2({
+    templateResult: function (item) {
+      return format(item);
+    },
+    templateSelection: function (item) {
+      return format(item);
+    },
   });
 }
 
 document.body.addEventListener("keyup", KeyCheck); //or however you are calling your method
 function KeyCheck(event) {
   var KeyID = event.keyCode;
-  console.log(KeyID);
   switch (KeyID) {
     case 8:
       chkNumber();
@@ -84,7 +90,6 @@ function format(item) {
   var countryUrl = "https://hatscripts.github.io/circle-flags/flags/";
 
   var url = countryUrl;
-  debugger;
   var img = $("<img>", {
     class: "img-flag",
     width: 26,
@@ -98,8 +103,11 @@ function format(item) {
 }
 
 $(document).ready(function () {
-  $("#frmCurr").select2({
+  $(".Sel2").select2({
     templateResult: function (item) {
+      return format(item);
+    },
+    templateSelection: function (item) {
       return format(item);
     },
   });

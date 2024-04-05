@@ -22,72 +22,72 @@
         <div class="FrmToWrp">
           <div class="frm flex-column">
             <label for="From">From</label>
-            <select name="FromCurr" id="frmCurr" onchange="updateTolist(this.value)">
+            <select name="FromCurr" class="Sel2" id="frmCurr" onchange="updateTolist(this)">
               <option data-flag="AU" value="AUD">AUD</option>
               <option data-flag="BG" value="BGN">BGN</option>
               <option data-flag="BR" value="BRL">BRL</option>
-              <option data-flag="🇨🇦" value="CAD">CAD</option>
-              <option data-flag="🇨🇭" value="CHF">CHF</option>
-              <option data-flag="🇨🇳" value="CNY">CNY</option>
-              <option data-flag="🇨🇿" value="CZK">CZK</option>
-              <option data-flag="🇩🇰" value="DKK">DKK</option>
-              <option data-flag="🇬🇧" value="GBP">GBP</option>
-              <option data-flag="🇭🇰" value="HKD">HKD</option>
-              <option data-flag="🇭🇺" value="HUF">HUF</option>
-              <option data-flag="🇮🇩" value="IDR">IDR</option>
-              <option data-flag="🇮🇱" value="ILS">ILS</option>
-              <option data-flag="🇮🇳" value="INR">INR</option>
-              <option data-flag="🇮🇸" value="ISK">ISK</option>
-              <option data-flag="🇯🇵" value="JPY">JPY</option>
-              <option data-flag="🇰🇷" value="KRW">KRW</option>
-              <option data-flag="🇲🇽" value="MXN">MXN</option>
-              <option data-flag="🇲🇾" value="MYR">MYR</option>
-              <option data-flag="🇳🇴" value="NOK">NOK</option>
-              <option data-flag="🇳🇿" value="NZD">NZD</option>
-              <option data-flag="🇵🇭" value="PHP">PHP</option>
-              <option data-flag="🇵🇱" value="PLN">PLN</option>
-              <option data-flag="🇷🇴" value="RON">RON</option>
-              <option data-flag="🇸🇪" value="SEK">SEK</option>
-              <option data-flag="🇸🇬" value="SGD">SGD</option>
-              <option data-flag="🇹🇭" value="THB">THB</option>
-              <option data-flag="🇹🇷" value="TRY">TRY</option>
-              <option data-flag="🇺🇸" value="USD" selected="selected">USD</option>
-              <option data-flag="🇿🇦" value="ZAR">ZAR</option>
+              <option data-flag="CA" value="CAD">CAD</option>
+              <option data-flag="CH" value="CHF">CHF</option>
+              <option data-flag="CN" value="CNY">CNY</option>
+              <option data-flag="CZ" value="CZK">CZK</option>
+              <option data-flag="DK" value="DKK">DKK</option>
+              <option data-flag="GB" value="GBP">GBP</option>
+              <option data-flag="HK" value="HKD">HKD</option>
+              <option data-flag="HU" value="HUF">HUF</option>
+              <option data-flag="ID" value="IDR">IDR</option>
+              <option data-flag="IL" value="ILS">ILS</option>
+              <option data-flag="IN" value="INR">INR</option>
+              <option data-flag="IS" value="ISK">ISK</option>
+              <option data-flag="JP" value="JPY">JPY</option>
+              <option data-flag="KR" value="KRW">KRW</option>
+              <option data-flag="MX" value="MXN">MXN</option>
+              <option data-flag="MY" value="MYR">MYR</option>
+              <option data-flag="NO" value="NOK">NOK</option>
+              <option data-flag="NZ" value="NZD">NZD</option>
+              <option data-flag="PH" value="PHP">PHP</option>
+              <option data-flag="PL" value="PLN">PLN</option>
+              <option data-flag="RO" value="RON">RON</option>
+              <option data-flag="SE" value="SEK">SEK</option>
+              <option data-flag="SG" value="SGD">SGD</option>
+              <option data-flag="TH" value="THB">THB</option>
+              <option data-flag="TR" value="TRY">TRY</option>
+              <option data-flag="US" value="USD" selected="selected">USD</option>
+              <option data-flag="ZA" value="ZAR">ZAR</option>
             </select>
           </div>
           <div class="to flex-column">
             <label for="To">To</label>
-            <select name="ToCurr" id="toCurr">
-              <option value="AUD">AUD</option>
-              <option value="BGN">BGN</option>
-              <option value="BRL">BRL</option>
-              <option value="CAD">CAD</option>
-              <option value="CHF">CHF</option>
-              <option value="CNY">CNY</option>
-              <option value="CZK">CZK</option>
-              <option value="DKK">DKK</option>
-              <option value="GBP">GBP</option>
-              <option value="HKD">HKD</option>
-              <option value="HUF">HUF</option>
-              <option value="IDR">IDR</option>
-              <option value="ILS">ILS</option>
-              <option value="INR" selected="selected">INR</option>
-              <option value="ISK">ISK</option>
-              <option value="JPY">JPY</option>
-              <option value="KRW">KRW</option>
-              <option value="MXN">MXN</option>
-              <option value="MYR">MYR</option>
-              <option value="NOK">NOK</option>
-              <option value="NZD">NZD</option>
-              <option value="PHP">PHP</option>
-              <option value="PLN">PLN</option>
-              <option value="RON">RON</option>
-              <option value="SEK">SEK</option>
-              <option value="SGD">SGD</option>
-              <option value="THB">THB</option>
-              <option value="TRY">TRY</option>
-              <option value="USD" disabled>USD</option>
-              <option value="ZAR">ZAR</option>
+            <select name="ToCurr" class="Sel2" id="toCurr" onchange="updateTolist(this)">
+              <option data-flag="AU" value="AUD">AUD</option>
+              <option data-flag="BG" value="BGN">BGN</option>
+              <option data-flag="BR" value="BRL">BRL</option>
+              <option data-flag="CA" value="CAD">CAD</option>
+              <option data-flag="CH" value="CHF">CHF</option>
+              <option data-flag="CN" value="CNY">CNY</option>
+              <option data-flag="CZ" value="CZK">CZK</option>
+              <option data-flag="DK" value="DKK">DKK</option>
+              <option data-flag="GB" value="GBP">GBP</option>
+              <option data-flag="HK" value="HKD">HKD</option>
+              <option data-flag="HU" value="HUF">HUF</option>
+              <option data-flag="ID" value="IDR">IDR</option>
+              <option data-flag="IL" value="ILS">ILS</option>
+              <option data-flag="IN" value="INR" selected="selected">INR</option>
+              <option data-flag="IS" value="ISK">ISK</option>
+              <option data-flag="JP" value="JPY">JPY</option>
+              <option data-flag="KR" value="KRW">KRW</option>
+              <option data-flag="MX" value="MXN">MXN</option>
+              <option data-flag="MY" value="MYR">MYR</option>
+              <option data-flag="NO" value="NOK">NOK</option>
+              <option data-flag="NZ" value="NZD">NZD</option>
+              <option data-flag="PH" value="PHP">PHP</option>
+              <option data-flag="PL" value="PLN">PLN</option>
+              <option data-flag="RO" value="RON">RON</option>
+              <option data-flag="SE" value="SEK">SEK</option>
+              <option data-flag="SG" value="SGD">SGD</option>
+              <option data-flag="TH" value="THB">THB</option>
+              <option data-flag="TR" value="TRY">TRY</option>
+              <option data-flag="US" value="USD" disabled>USD</option>
+              <option data-flag="ZA" value="ZAR">ZAR</option>
             </select>
           </div>
         </div>

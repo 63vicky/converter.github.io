@@ -2,7 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 .box {
   background-color: #fff;
@@ -57,4 +57,19 @@ input {
 }
 input:focus {
   outline: none;
+}
+.select2 {
+  width: 100% !important;
+}
+.select2-container .select2-selection--single {
+  height: auto !important;
+}
+.select2-selection__rendered {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  line-height: normal !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 100% !important;
+  top: 0px !important;
 }
